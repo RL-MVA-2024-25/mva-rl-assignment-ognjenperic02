@@ -42,7 +42,7 @@ class ProjectAgent:
 
     def load(self):
         self.model = PPO.load("ppo_model")
-        vec_norm = pickle.load(open("../vec_normalize_stats.pkl", "rb"))
+        vec_norm = pickle.load(open("vec_normalize_stats.pkl", "rb"))
 
         self.obs_mean = vec_norm.obs_rms.mean
         self.obs_var = vec_norm.obs_rms.var
